@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
 use App\Jobs\SendEmailJob;
 use App\Mail\SendMail;
@@ -63,3 +64,12 @@ Route::post('uploadimage', [ImageController::class, 'uploadImage']);
 Route::get('uploadfile', [ImageController::class, 'uploadFile']);
 
 Route::get('test', [TestingController::class, "index"]);
+
+
+Route::post('pyramid', [HomeController::class, "pyramid"]);
+
+
+Route::post('generateodd', [HomeController::class, "generateodd"]);
+
+
+Route::post('generateprime', [HomeController::class, "generateprime"]);
